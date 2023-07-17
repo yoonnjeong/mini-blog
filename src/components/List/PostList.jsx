@@ -21,10 +21,10 @@ function PostList(props) {
 
   return (
     <Wrapper>
-      {posts.map((post) => {
-        <PostListItem key={post.id} post={post} onClick={() => {
+      {posts.map((post, index) => {
+       return ( <PostListItem key={post.id} post={post} onClick={() => {
           onClickItem(post);
-        }}></PostListItem>
+        }}></PostListItem>)
       })}
     </Wrapper>
   )

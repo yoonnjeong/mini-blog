@@ -26,19 +26,15 @@ const Container = styled.div`
 `;
 
 function MainPage(props) {
-  const {} = props;
-
-  const Navigate = useNavigate();
+  const navigate = useNavigate();
 
   return (
     <Wrapper>
       <Container>
         <Button title="글 작성" onClick={() => {
-          Navigate("/post-write");
-        }}>
-        </Button>
-
-        <PostList posts={data} onClickItem={(item) => { Navigate(`/post/${item.id}`) }}></PostList>
+          navigate("/post-write");
+        }} />
+        <PostList posts={data} onClickItem={(item) => { navigate(`/post/${item.id}`) }}></PostList>
       </Container>
     </Wrapper>
   )

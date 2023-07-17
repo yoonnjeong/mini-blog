@@ -20,7 +20,7 @@ const Container = styled.div`
   max-width: 720px;
 
   & > * {
-    :not(:last-child) {
+    &:not(:last-child) {
       margin-bottom: 16px;
     }
   }
